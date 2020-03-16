@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>高清视频-下载APP/在线观看</title>
+        <meta name="description" content="免费、国产、无码、日本高清AV每日更新，全场免费！可下载！">
+        <meta property="og:description" content="免费、国产、无码、日本高清AV每日更新，全场免费！可下载！">
+        <meta property="og:image" content="/img/aaaaa6aZY.jpg">
+        <link rel="stylesheet" href="reset.css">
+        <style>
+            *, *:before, *:after {
+                box-sizing: border-box;
+                outline: none;
+            }
+            html, body {
+                font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "AOS Icons", "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, STHeiti, 华文细黑, sans-serif;
+                line-height: 1;
+                letter-spacing: 1px;
+            }
+            html {
+                font-size: 16px;
+            }
+            a {
+                text-decoration: none;
+            }
+            .hide {
+                display: none!important;
+            }
+            .show {
+                display: block!important;
+            }
+            .showf {
+                display: flex!important;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 10;
+            }
+            header .header-content-m {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                color: #f8e71c;
+            }
+            header .header-content-m img {
+                width: 20px;
+                margin-right: 5px;
+            }
+            header .header-content-m .text {
+                font-weight: 600;
+                font-size: .9rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            main {
+                position: relative;
+                width: 100%;
+                background-image: linear-gradient(to top, #f35d44, #dd0f3a);
+                padding-top: 50px;
+                overflow: hidden;
+            }
+            
+            .container-m {
+                display: flex;
+                justify-content: center;
+                max-width: 1024px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 50px 40px 150px;
+            }
+            .container-m .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 20px;
+            }
+            .container-m .wrapper > img {
+                max-width: 300px;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .container-m .wrapper h1 {
+                line-height: 1.33;
+                color: #fff;
+                font-size: 2.3rem;
+                font-weight: 600;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .container-m .wrapper .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 220px;
+                height: 45px;
+                margin-top: 20px;
+                border-radius: 50px;
+                color: #fff;
+                font-weight: 500;
+                background-color: #fdbc3b;
+                box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+            }
+            .container-m .wrapper .btn img {
+                width: 25px;
+                margin-right: 10px;
+            }
+            .container-m .wrapper .info {
+                margin-top: 30px;
+                color: #fff;
+                text-align: center;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            .container-m .wrapper .info a {
+                color: #fad961;
+                text-decoration: underline;
+            }
+            .ground-img {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                min-height: 40px;
+            }
+            .download-des {
+	position: absolute;
+	bottom: 46px;
+	width: 100%;
+	text-align: center;
+	color: #e85151;
+	font-weight: 600;
+	font-size: 1.1rem;
+	left: 5px;
+            }
+
+            section {
+                max-width: 768px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 30px 40px;
+                overflow: hidden;
+            }
+            .download-content-m {
+                display: block;
+            }
+            .download-content-m > p {
+                line-height: 1.5;
+                text-align: center;
+                font-size: 0.9rem;
+                word-break: keep-all;
+            }
+            .download-content-m > p span {
+                margin: 0 5px;
+                font-weight: 600;
+            }
+            .download-content-m p.top {
+                color: #e85151;
+            }
+            .download-content-m p.bottom {
+                color: #4e4e4e;
+            }
+            .download-content-m .wrapper {
+                display: flex;
+                justify-content: center;
+                margin: 30px 0;
+            }
+            .download-content-m .wrapper .boxes {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: calc((100% - 40px) / 2);
+                width: 50%;
+                padding: 20px 10px 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+            }
+            .download-content-m .wrapper .boxes:first-of-type {
+	margin-right: 70px;
+            }
+            .download-content-m .wrapper .boxes .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 220px;
+                width: 100%;
+                height: 40px;
+                border-radius: 50px;
+                margin-bottom: 20px;
+                font-weight: 500;
+                color: #fff;
+                background-image: linear-gradient(to right, #f35d44, #dd0f3a);
+            }
+            .download-content-m .wrapper .boxes .btn.disable {
+                background: #999;
+            }
+            .download-content-m .wrapper .boxes .title {
+                margin: 5px 0 30px;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            .download-content-m .wrapper .boxes .link {
+                margin-top: 10px;
+                color: #e2574c;
+                font-size: .9rem;
+                text-decoration: underline;
+            }
+            .download-content-m .wrapper .boxes.android {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 100%;
+                width: 100%;
+                padding: 20px 10px;
+                margin-top: -30px;
+            }
+            .download-content-m .wrapper .boxes.android .btn {
+                width: calc((100% - 10px) / 2);
+            }
+            .download-content-m .wrapper .boxes.android .btn:nth-of-type(odd) {
+                margin-right: 10px;
+            }
+            .download-content-m .wrapper .boxes.android .btn img {
+                width: 25px;
+                margin-right: 10px;
+            }
+            .download-content-m .wrapper .boxes.android p {
+                margin-top: 10px;
+                color: #e2574c;
+                font-size: .9rem;
+            }
+
+            .install-content-m {
+                display: block;
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+            .install-content-m h2 {
+                margin-bottom: 20px;
+                font-size: 2rem;
+                font-weight: 600;
+                color: #e85151;
+            }
+            .install-content-m ul {
+                display: flex;
+            }
+            .install-content-m ul li {
+                flex: 1;
+                display: block;
+                padding: 15px 10px;
+                border: 2px solid #e85151;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-width: 0;
+                font-weight: 500;
+                text-align: center;
+                color: #e85151;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .install-content-m ul li:not(:last-of-type) {
+                margin-right: 20px;
+            }
+            .install-content-m ul li.active {
+                background: #e85151;
+                color: #fff;
+            }
+            .install-content-m .tab-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 2px solid #e85151;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .install-content-m .tab-container.android {
+                border-radius: 10px;
+            }
+            .install-content-m .tab-container .tab-content {
+                display: none;
+                padding: 20px 30px;
+            }
+            .install-content-m .tab-container .tab-content.active {
+                display: block;
+            }
+            .install-content-m .tab-container .tab-content p {
+                padding: 15px;
+                line-height: 1.333;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #333;
+            }
+            .install-content-m .tab-container .tab-content img {
+                max-width: 350px;
+                width: 100%;
+            }
+            
+            footer .footer {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding-bottom: 40px;
+                color: #fff;
+                font-weight: 300;
+            }
+            footer p {
+                font-size: 1rem;
+                text-align: left;
+                line-height: 1.5;
+            }
+            footer a {
+                color: #fff;
+                text-decoration: underline;
+            }
+
+            .fixed-bottom {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .fixed-bottom .potato {
+                position: absolute;
+                right: 10px;
+                bottom: 100%;
+                margin-bottom: 20px;
+            }
+            .fixed-bottom .potato img {
+                width: 100px;
+            }
+            .fixed-bottom .website {
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.3);
+                padding: 10px;
+                background: #fff;
+            }
+            .fixed-bottom .website.show {
+                display: flex;
+            }
+            .fixed-bottom .website p {
+                flex: 1;
+                line-height: 1.5;
+                font-size: .9rem;
+                font-weight: 600;
+            }
+            .fixed-bottom .website .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 7px 10px;
+                margin-left: 10px;
+                border-radius: 50px;
+                border: 2px solid;
+                color: #fdbc3b;
+                font-size: .9rem;
+                font-weight: 500;
+            }
+            .fixed-bottom .btn img {
+                width: 25px;
+                margin-right: 5px;
+            }
+
+            .pop-content {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, .6);
+                z-index: 100;
+            }
+            .pop-content .popup {
+                max-width: 380px;
+                width: 90%;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+            .pop-content .des-content {
+                padding: 25px 20px 20px;
+            }
+            .pop-content .title {
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+            }
+            .pop-content .des {
+                font-size: 1.2rem;
+                color: #999;
+                line-height: 1.3333;
+            }
+            .pop-content .btn-content {
+                display: flex;
+                text-align: center;
+                border-top: 1px solid #999;
+            }
+            .pop-content .btn {
+                flex: 1;
+                padding: 20px;
+                color: #e85151;
+            }
+            .pop-content .btn:nth-of-type(even) {
+                border-left: 1px solid #999;
+            }
+
+            @media (max-width: 1024px) {
+                .container-m  {
+                    padding: 50px 40px 100px;
+                }
+            }
+
+            @media (max-width: 640px) {
+                .container-m .wrapper {
+                    width: 60%;
+                    margin-right: 0;
+                }
+                .container-m > img {
+                    width: 40%;
+                    height: 100%;
+                }
+            }
+
+            @media (max-width: 560px) {
+                html {
+                    font-size: 14px;
+                }
+
+                .container-m {
+                    padding: 30px 20px 70px;
+                }
+                .container-m .wrapper > img {
+                    margin-bottom: 15px;
+                }
+                .container-m .wrapper h1 {
+                    font-size: 1.8rem;
+                }
+                .container-m .wrapper .btn {
+                    max-width: 190px;
+                    margin-top: 15px;
+                }
+                .container-m .wrapper .btn img {
+                    margin-right: 5px;
+                }
+                .container-m .wrapper .info {
+                    margin-top: 20px;
+                }
+
+                section {
+                    padding: 20px 10px 0;
+                }
+                .download-content-m .wrapper {
+                    margin: 20px 0;
+                }
+                .download-content-m .wrapper .boxes {
+                    max-width: calc((100% - 10px) / 2);
+                    padding: 10px 10px 20px;
+                }
+                .download-content-m .wrapper .boxes:first-of-type {
+                    margin-right: 10px;
+                }
+                .download-content-m .wrapper .boxes .btn {
+                    margin-bottom: 10px;
+                }
+                .download-content-m .wrapper .boxes img {
+                    max-width: 100px;
+                    width: 50%;
+                }
+                .download-content-m .wrapper .boxes .title {
+                    margin-bottom: 15px;
+                }
+                .download-content-m .wrapper .boxes.android {
+                    margin-top: -20px;
+                }
+                .download-content-m .wrapper .boxes.android .btn img {
+                    margin-right: 5px;
+                }
+
+                .install-content-m {
+                    padding-top: 30px;
+                }
+                .install-content-m h2 {
+                    margin-bottom: 15px;
+                }
+                .install-content-m ul li:not(:last-of-type) {
+                    margin-right: 10px;
+                }
+                .install-content-m .tab-container .tab-content {
+                    padding: 10px 20px;
+                }
+                .install-content-m .tab-container .tab-content p {
+                    padding: 10px;
+                }
+
+                footer .footer {
+                    padding-bottom: 10px;
+                }
+
+                .fixed-bottom .potato {
+                    right: 0;
+                    margin-bottom: 0;
+                }
+                .fixed-bottom .potato img {
+                    width: 80px;
+                }
+            }
+
+            @media (max-width: 380px) {
+                html {
+                    font-size: 12px;
+                }
+
+                .container-m {
+                    padding: 30px 10px 70px;
+                }
+                .container-m .wrapper {
+                    width: 63%;
+                }
+                .container-m > img {
+                    width: 37%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main style="padding-top: 50px;">
+            <div class="container-m">
+                <div class="wrapper">
+                    
+                    <div>
+                        <h1>万千视频 秒播高清<br>免费看到爽！</h1>
+                        <a class="btn online hide iosShow scrollBtn show showf" href="https://www.91hdtv.net" target="_blank"><img src="playicon_wh.png" alt="play">免安装在线观看</a>
+                    </div>
+                </div>
+            </div>
+            <img class="ground-img" src="vediobg1.png" alt="ground">
+            <p class="download-des">↓下载APP应用享受完整功能↓</p>
+        </main>
+        
+        <section>
+            <div class="download-content-m">
+                <div class="wrapper">
+                    <div class="boxes hide iosShow show showf">
+                        <img src="logo.png" alt="app-icon">
+                        <img src="download_qr.png" alt="app-icon">
+                      <p class="title">安卓APP版</p>
+                                                <a class="btn ios1 scrollTo" href="https://www.798hdtv.com/download/mm9418.apk" data-tab="#iosApp">安卓APP载点</a>     
+                    </div>
+                </div>   
+            </div>
+            </div>
+        </section>
+  
+        <footer style="margin-bottom: 0px;"> 
+        
+        </footer>
+</body></html>
